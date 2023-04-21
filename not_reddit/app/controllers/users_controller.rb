@@ -4,7 +4,7 @@ class UsersController < ApplicationController
     
     
     def new
-        @user = user.new 
+        @user = User.new 
         render :new 
     end
 
@@ -23,7 +23,7 @@ class UsersController < ApplicationController
 
     def show
         @user = User.find(params[:id])
-        render :show  
+        redirect_to subs_url
     end
 
     def destroy
